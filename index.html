@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pagination Example</title>
+  <style>
+    .pagination {
+      display: inline-block;
+    }
+    
+    .pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 1px solid #ddd;
+      margin: 0 4px;
+    }
+    
+    .pagination a.active {
+      background-color: #4CAF50;
+      color: white;
+      border: 1px solid #4CAF50;
+    }
+    
+    .pagination a:hover:not(.active) {
+      background-color: #7e3333;
+    }
+    .paragraph-with-image {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .paragraph-with-image img {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+    
+    .paragraph-with-image:hover img {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Movie List in 1991</h1>
+  <ul id="list" style="list-style-type:none;">
+   
+    <li>
+        <div class="paragraph-with-image">
+            <p>Gnana paravai</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/8f/Gnana_Paravai_poster.jpg" alt="Hovered Image" />
+        </div>
+    </li> 
+    <li>
+        <div class="paragraph-with-image">
+            <p>Sami Potta Mudichu</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Sami_Potta_Mudichu.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Sigaram</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Sigaram.JPG" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Vaa Arugil Vaa</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/fc/Vaa_Arugil_Vaa.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Eeramana Rojave</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/43/Eeramana_Rojave.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Dharma Durai</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Dharma_Durai_1991_poster.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Kumbakarai Thangaiah</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/3/36/Kumbakarai_Thangaiah.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Pudhu Manithan</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Pudhu_Manithan.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Chinna Thambi</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Chinna_Thambi.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Pavunu Pavunudhan</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Pavunnu_Pavunuthan_DVD_Cover.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Aath Un Kovilile</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/76/Aatha_Un_Koyilile_poster.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Cheran Pandian</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/75/Cheran_Pandian.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Ennarukil Nee Irunthal</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/fa/Ennarukil_Nee_Irunthal.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Ayul Kaithi</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/0e/Ayul_Kaithi.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Anbu Sangili</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Anbu_Sangili_DVD_cover.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Jenma Natchathiram</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Jenma_Natchathram.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Idhayam</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/88/Idhayam_film_poster.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Mgr Nagaril</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/ad/MGR_Nagaril.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <li>
+        <div class="paragraph-with-image">
+            <p>Guna</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/21/Gunaa_poster.jpg" alt="Hovered Image" />
+        </div>
+    </li>     
+    <li>
+        <div class="paragraph-with-image">
+            <p>Moondrezhuthil En Moochirukkum</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Moondrezhuthil_En_Moochirukkum_DVD_cover.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <br> 
+    <li>
+        <div class="paragraph-with-image">
+            <p>Naatthukku Oru Nallavan</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/89/Nattukku_Oru_Nallavan.jpg" alt="Hovered Image" />
+        </div>
+    </li>     
+    <li>
+        <div class="paragraph-with-image">
+            <p>Bramma</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/da/Bramma_poster.jpg" alt="Hovered Image" />
+        </div>
+    </li>
+    <br> 
+    
+</ol>
+
+  <div class="pagination">
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+  </div>
+
+  <script>
+    const list = document.getElementById('list');
+    const itemsPerPage = 5; 
+    
+    function showPage(pageNumber) {
+      const startIndex = (pageNumber - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      
+      const lis = list.getElementsByTagName('li');
+      for (let i = 0; i < lis.length; i++) {
+        if (i >= startIndex && i < endIndex) {
+          lis[i].style.display = 'list-item';
+        } else {
+          lis[i].style.display = 'none';
+        }
+      }
+    }   
+    const paginationLinks = document.querySelectorAll('.pagination a');
+    paginationLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        paginationLinks.forEach(function(link) {
+          link.classList.remove('active');
+        });
+        link.classList.add('active');
+        const pageNumber = parseInt(link.textContent);
+        showPage(pageNumber);
+      });
+    }); 
+    showPage(1);
+  </script>
+</body>
+</html>
